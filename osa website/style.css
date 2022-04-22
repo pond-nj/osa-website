@@ -1,0 +1,38 @@
+.bg {
+  background-color: #f2e0c3;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.intro {
+  color: #FFF;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 30px;
+}
+
+img.foot-pic {
+  width: 100%;
+  border: 10px solid;
+  border-color: #c66840;
+}
+
+.bg-foot-pic{
+  background-image: url("./static/thumbnail.png");
+  background-position: bottom;
+  background-repeat: repeat-x;
+}
+
+.block:hover{
+  background-image: url("./static/962a559e-9da8-437e-abe0-b7265d2d3989.png");
+  background-size: 20%;
+  bottom: -20px;
+  right: -40px;
+}
+
+
+/*# sourceMappingURL=style.css.map */
