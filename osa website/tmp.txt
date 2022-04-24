@@ -1,0 +1,76 @@
+(function() {
+    // Init
+    var container = document.getElementById("container"),
+      inner = document.getElementById("inner"),
+      helper = document.getElementById("helper");
+  
+    console.log(container);
+  
+    // Mouse
+    var mouse = {
+      _x: 0,
+      _y: 0,
+      x: 0,
+      y: 0,
+      debug_x:0,
+      debug_y:0,
+      updatePosition: function(event) {
+        var e = event || window.event;
+        var rect = container.getBoundingClientRect();
+        console.log(e.clientX)
+        this.x = e.clientX - rect.left - Math.floor(container.offsetWidth/2);//x position within the element.
+        this.y = Math.floor(container.offsetHeight/2) - (e.clientY - rect.top);  //y position within the element.
+      },
+      show: function() {
+        // return "(" + this.x + ", " + this.y + ", "+ this._x + ", " + this._y +")";
+        return "(" + parseInt(this.x) + ", " + parseInt(this.y) + ", "+ this._x + ", " + this._y +")";
+      }
+    };
+
+  
+    //--------------------------------------------------
+  
+    var counter = 0;
+    var updateRate = 1;
+    var isTimeToUpdate = function() {
+      return counter++ % updateRate === 0;
+    };
+  
+    //--------------------------------------------------
+  
+    var onMouseEnterHandler = function(event) {
+      helper.className = "";
+      update(event);
+    };
+  
+    var onMouseLeaveHandler = function() {
+      inner.style = "";
+      helper.className = "hidden";
+    };
+  
+    var onMouseMoveHandler = function(event) {
+      if (isTimeToUpdate()) {
+        update(event);
+      }
+      displayMousePositionHelper(event);
+    };
+  
+    //--------------------------------------------------
+  
+    var update = function(event) {
+      mouse.updatePosition(event);
+    };
+  
+    var displayMousePositionHelper = function(event) {
+      var e = event || window.event;
+      helper.innerHTML = mouse.show();
+      helper.style = "top:"+(e.clientY-container.offsetTop)+"px;"
+                   + "left:"+(e.clientX-container.offsetLeft)+"px;";
+    };
+  
+    //--------------------------------------------------
+  
+    container.onmouseenter = onMouseEnterHandler;
+    container.onmouseleave = onMouseLeaveHandler;
+    container.onmousemove = onMouseMoveHandler;
+  })();

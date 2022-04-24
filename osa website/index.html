@@ -4,16 +4,16 @@
 
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Vollkorn&display=swap" rel="stylesheet">
-
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script src="../static/style/js/animatedhome.js"></script>
-        <script>AOS.init();</script>
-
 
         <link href="./style.css" rel="stylesheet">
     </head>
     <body class="bg">
-        
+
+        <script>
+            AOS.init();
+        </script>
+
         <div class="container-fluid bg-white pt-2 pb-2 ">
             <div class="container-xl d-flex flex-row flex-wrap align-items-center">
                 <img src="./static/logo_en.png">
@@ -29,7 +29,7 @@
                     <iframe class="col-8 w-100 h-100" id="video" src="https://www.youtube.com/embed/i1JZ2THMU4A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="col col-12 col-xl-4 p-0" >
-                    <div class="intro p-5 m-0 flex-column">
+                    <div class="intro p-5 m-0 flex-column" data-aos="zoom-in-up">
                         <h4 class="mb-3">"What I learnt from CUHK"</h4>
                         <p>
                             We have interviewed 10 students and alumni who studied at CUHK at different times to reflect on the identity of CUHKers, and what they learnt from the University. The interviewees include people from all walks of life, from business leaders, working professionals, well-known radio DJ, founder of a social venture, to undergraduates from diverse academic disciplines who are yet to embark on their professional journeys. Despite their differences in age, backgrounds and professions, they all share some qualities in common as CUHKers.
@@ -43,68 +43,101 @@
             <div class="container">
                 <div class="h3 mb-5">"What I learnt from CUHK"</div>
                 <div class="row">
-                    
-                    <div class="col-12 col-lg-6 mb-5" onclick="location.href='https://www.youtube.com/watch?v=0YaJ-bgYYzs'">
-                        <div class="d-flex flex-row flex-wrap container block">
-                            <img class="col-12 col-md-6 mb-5" src="./static/ep1.jpeg">
-                            <div class="col-12 col-md-6 ps-4" style="background-color: #ffffff;">
-                                <div class="">EP | 1 </div>
-                                <h4 class="pt-4">Multimedia Thinking</h4>
-                                <div class="fw-light" style="font-size: 90%;">Sammy Leung</div>
-                                <div class="fw-light" style="font-size: 90%;">Radio DJ</div>
-                                <div class="fw-light" style="font-size: 90%;">School of Journalism and Communication</div>
+
+                    <div class="col-12 col-lg-6 mb-5 p-4" data-aos="zoom-in-up">
+                        <div id="container0" class="container-wiggle">
+                            <div id="inner0" class="inner-wiggle">
+                                <div id="flower-container" class="container d-flex flex-row flex-wrap p-0">
+                                    <div id="flower0" class="flower-transition"></div>
+                                    <img class="col-12 col-md-6" src="./static/ep1.jpeg">
+                                    <div id="text" class="col-12 col-md-6 ps-4 pt-4">
+                                        <div class="">EP | 1 </div>
+                                        <h4 class="pt-4">Multimedia Thinking</h4>
+                                        <div class="fw-light" style="font-size: 90%;">Sammy Leung</div>
+                                        <div class="fw-light" style="font-size: 90%;">Radio DJ</div>
+                                        <div class="fw-light" style="font-size: 90%;">School of Journalism and Communication</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-12 col-lg-6 mb-5 d-flex flex-row flex-wrap container">
-                        <img class="col-12 col-md-6 mb-5" src="./static/ep1.jpeg">
-                        <div class="col-12 col-md-6 ps-4">
-                            <div class="">EP | 1 </div>
-                            <h4 class="pt-4">Multimedia Thinking</h4>
-                            <div class="fw-light" style="font-size: 90%;">Sammy Leung</div>
-                            <div class="fw-light" style="font-size: 90%;">Radio DJ</div>
-                            <div class="fw-light" style="font-size: 90%;">School of Journalism and Communication</div>
+                    <div class="col-12 col-lg-6 mb-5 p-4" data-aos="zoom-in-up">
+                        <div id="container1" class="container-wiggle">
+                            <div id="inner1" class="inner-wiggle d-flex flex-row flex-wrap container p-0">
+                                <div id="flower-container" class="container d-flex flex-row flex-wrap p-0">
+                                    <div id="flower1" class="flower-transition"></div>
+                                    <img class="col-12 col-md-6" src="./static/ep1.jpeg">
+                                    <div id="text" class="col-12 col-md-6 ps-4 pt-4">
+                                        <div class="">EP | 1 </div>
+                                        <h4 class="pt-4">Multimedia Thinking</h4>
+                                        <div class="fw-light" style="font-size: 90%;">Sammy Leung</div>
+                                        <div class="fw-light" style="font-size: 90%;">Radio DJ</div>
+                                        <div class="fw-light" style="font-size: 90%;">School of Journalism and Communication</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col-12 col-lg-6 mb-5 d-flex flex-row flex-wrap container">
-                        <img class="col-12 col-md-6 mb-5" src="./static/ep1.jpeg">
-                        <div class="col-12 col-md-6 ps-4">
-                            <div class="">EP | 1 </div>
-                            <h4 class="pt-4">Multimedia Thinking</h4>
-                            <div class="fw-light" style="font-size: 90%;">Sammy Leung</div>
-                            <div class="fw-light" style="font-size: 90%;">Radio DJ</div>
-                            <div class="fw-light" style="font-size: 90%;">School of Journalism and Communication</div>
+                    <div class="col-12 col-lg-6 mb-5 p-4" data-aos="zoom-in-up">
+                        <div id="container2" class="container-wiggle">
+                            <div id="inner2" class="inner-wiggle d-flex flex-row flex-wrap container p-0">
+                                <div id="flower-container" class="container d-flex flex-row flex-wrap p-0">
+                                    <div id="flower2" class="flower-transition"></div>
+                                    <img class="col-12 col-md-6" src="./static/ep1.jpeg">
+                                    <div id="text" class="col-12 col-md-6 ps-4 pt-4">
+                                        <div class="">EP | 1 </div>
+                                        <h4 class="pt-4">Multimedia Thinking</h4>
+                                        <div class="fw-light" style="font-size: 90%;">Sammy Leung</div>
+                                        <div class="fw-light" style="font-size: 90%;">Radio DJ</div>
+                                        <div class="fw-light" style="font-size: 90%;">School of Journalism and Communication</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col-12 col-lg-6 mb-5 d-flex flex-row flex-wrap container">
-                        <img class="col-12 col-md-6 mb-5" src="./static/ep1.jpeg">
-                        <div class="col-12 col-md-6 ps-4">
-                            <div class="">EP | 1 </div>
-                            <h4 class="pt-4">Multimedia Thinking</h4>
-                            <div class="fw-light" style="font-size: 90%;">Sammy Leung</div>
-                            <div class="fw-light" style="font-size: 90%;">Radio DJ</div>
-                            <div class="fw-light" style="font-size: 90%;">School of Journalism and Communication</div>
+                    <div class="col-12 col-lg-6 mb-5 p-4" data-aos="zoom-in-up">
+                        <div id="container3" class="container-wiggle">
+                            <div id="inner3" class="inner-wiggle d-flex flex-row flex-wrap container p-0">
+                                <div id="flower-container" class="container d-flex flex-row flex-wrap p-0">
+                                    <div id="flower3" class="flower-transition"></div>
+                                    <img class="col-12 col-md-6" src="./static/ep1.jpeg">
+                                    <div id="text" class="col-12 col-md-6 ps-4 pt-4">
+                                        <div class="">EP | 1 </div>
+                                        <h4 class="pt-4">Multimedia Thinking</h4>
+                                        <div class="fw-light" style="font-size: 90%;">Sammy Leung</div>
+                                        <div class="fw-light" style="font-size: 90%;">Radio DJ</div>
+                                        <div class="fw-light" style="font-size: 90%;">School of Journalism and Communication</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                   <div class="col-12 col-lg-6 mb-5 d-flex flex-row flex-wrap container">
-                        <img class="col-12 col-md-6 mb-5" src="./static/ep1.jpeg">
-                        <div class="col-12 col-md-6 ps-4">
-                            <div class="">EP | 1 </div>
-                            <h4 class="pt-4">Multimedia Thinking</h4>
-                            <div class="fw-light" style="font-size: 90%;">Sammy Leung</div>
-                            <div class="fw-light" style="font-size: 90%;">Radio DJ</div>
-                            <div class="fw-light" style="font-size: 90%;">School of Journalism and Communication</div>
+                    <div class="col-12 col-lg-6 mb-5 p-4" data-aos="zoom-in-up">
+                        <div id="container4" class="container-wiggle">
+                            <div id="inner4" class="inner-wiggle d-flex flex-row flex-wrap container p-0">
+                                <div id="flower-container" class="container d-flex flex-row flex-wrap p-0">
+                                    <div id="flower4" class="flower-transition"></div>
+                                    <img class="col-12 col-md-6" src="./static/ep1.jpeg">
+                                    <div id="text" class="col-12 col-md-6 ps-4 pt-4">
+                                        <div class="">EP | 1 </div>
+                                        <h4 class="pt-4">Multimedia Thinking</h4>
+                                        <div class="fw-light" style="font-size: 90%;">Sammy Leung</div>
+                                        <div class="fw-light" style="font-size: 90%;">Radio DJ</div>
+                                        <div class="fw-light" style="font-size: 90%;">School of Journalism and Communication</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <section class="pt-4 pb-4 bg-foot-pic" id="book">
+        <section class="pt-4 pb-4 bg-foot-pic">
             <div class="container">
                 <div class="row">
                     <div class="col col-12 col-lg-6 d-flex justify-content-center">
@@ -131,6 +164,12 @@
             </div>
         </section>
 
+        <!-- <section id="sep">
+            <div class="container-fluid pb-4 bg-white">
+
+            </div>
+        </section> -->
+
         <!-- <div class="center container">
             <div class="d-flex flex-row">
                 <div>
@@ -153,5 +192,8 @@
         </div>
         
     </body>
+    <footer>
+        <script src="./script.js"></script>
+    </footer>
 
 </html>
