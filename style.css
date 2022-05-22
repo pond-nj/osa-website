@@ -55,14 +55,42 @@ a:hover{
   background-color: #ffffff;
 }
 
+iframe{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .intro {
   color: rgb(51, 51, 51);
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 50px 30px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+  text-justify: inter-word;
+  align-items: center;
 }
+
+.vid{
+  width: 80%;
+  height: auto;
+  min-height: 50vh;
+}
+
+@media screen and (max-device-width: 800px) {
+  .vid{
+    width: 80%;
+    height: auto;
+    min-height: 20vh;
+  }
+}
+
+/* .video_wrapper{
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */ 
+/* } */
 
 img.foot-pic {
   width: 100%;
