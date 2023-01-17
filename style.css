@@ -64,13 +64,16 @@ iframe{
 
 .intro {
   color: rgb(51, 51, 51);
-  padding: 50px 30px;
   font-size: 20px;
   display: flex;
   justify-content: center;
   text-align: justify;
   text-justify: inter-word;
   align-items: center;
+}
+
+.intro-padding{
+  padding: 50px 30px;
 }
 
 .vid{
@@ -94,6 +97,7 @@ iframe{
 
 img.foot-pic {
   width: 100%;
+  /* height: auto; */
   border: 10px solid;
   border-color: #c66840;
 }

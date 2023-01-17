@@ -20,6 +20,28 @@
     <link href="./style.css" rel="stylesheet">
     <link rel="icon" href="./static/CUHK.svg.png" type="image/icon type">
 
+    <script>
+        function loadpage(l){
+            let content;
+            fetch('./' + l + ".json")
+            .then(res => res.json())
+            .then(res => {
+                content = res
+                Object.keys(content).forEach((k)=>{
+                    if(Array.isArray(content[k])){
+                        c = content[k].join("<br/><br/>")
+                    }else{
+                        c = content[k]
+                    }
+                    document.getElementById(k).innerHTML = c
+                })
+            });
+        }
+
+        window.onload = function(){
+            loadpage("en")
+        }
+    </script>
 
     <title>The Office of Student Affairs</title>
 </head>
@@ -30,14 +52,14 @@
         AOS.init();
     </script>
 
-    <div class="container-fluid bg-white pt-2 pb-2 ">
+    <div class="container-fluid bg-white pt-2 pb-2">
         <div class="container-xl d-flex flex-row flex-wrap align-items-center">
             <a href="https://www.osa.cuhk.edu.hk/">
                 <img src="./static/logo_en.png">
             </a>
-            <a class="ms-auto align-middle me-2">ENG</a>
-            <a class="me-2">C1</a>
-            <a class="">C2</a>
+            <a class="ms-auto align-middle me-2" onclick="loadpage('en')">En</a>
+            <a class="me-2" onclick="loadpage('trad')">繁</a>
+            <a class="" onclick="loadpage('sim')">简</a>
         </div>
     </div>
 
@@ -57,11 +79,10 @@
                     allowfullscreen></iframe>
             </div>
 
-            <div class="intro flex-column" data-aos="zoom-in-up">
-                <h2>We are CUHKers II</h2>
-                <h4><i>Change and constant at CUHK</i></h4>
-                <p style="font-size: 17px;">
-                    In the second season of the We are CUHKers series, we invited two prominent CUHK alumni, film director Adam Wong and producer Saville Chan, to document their meaningful conversations with some of our graduates. Together they discussed the distinctive qualities of CUHKers. We also sat down with five friends, who are either current CUHK students or young alumni. All have overcome a myriad of hurdles in pursuing their dreams, and eventually became the worldly individuals they are today. Nevertheless, they remain steadfast in their beliefs. Educated in the same environment, and excelling in their own fields (architecture, business, art, and sports), how did they, with the special qualities of CUHKers, evolve and flourish? Let us dive into their conversations, and appreciate how the CUHK spirit is ingrained in each of us in one way or another.
+            <div class="intro intro-padding flex-column" data-aos="zoom-in-up">
+                <h2 id="title-1"></h2>
+                <h4><i id="subtitle-1"></i></h4>
+                <p style="font-size: 17px;" id="content-1">
                 </p>
             </div>
         </div>
@@ -71,9 +92,8 @@
 
     <section class="container-fluid bg-white p-5">
         <div class="container">
-            <div class="h3 mb-4">We are CUHKers II - Video Series</div>
+            <div class="h3 mb-4" id="video-topic"></div>
             <div class="row flex-row justify-content-center">
-
                 <div class="col-12 col-lg-6 mb-2 p-4" data-aos="zoom-in-up">
                     <a href="https://youtu.be/0YaJ-bgYYzs" target="_blank" rel="noopener noreferrer">
                         <div id="container0" class="container-wiggle zoom">
@@ -87,11 +107,10 @@
                                             <span class="ms-2">EP | 1</span>
                                         </div>
                                         <!-- Name -->
-                                        <h4 class="pt-4">Connection</h4>
-                                        <div class="fw-light" style="font-size: 90%;">Sarah Mui</div>
-                                        <div class="fw-light" style="font-size: 90%;">Co-founder of One Bite Design
-                                        </div>
-                                        <div class="fw-light" style="font-size: 90%;">New Asia | Architecture </div>
+                                        <h4 class="pt-4" id="1-topic"></h4>
+                                        <div class="fw-light" style="font-size: 90%;" id="1-name"></div>
+                                        <div class="fw-light" style="font-size: 90%;" id="1-pos"></div>
+                                        <div class="fw-light" style="font-size: 90%;" id="1-col"></div>
                                     </div>
                                 </div>
                             </div>
@@ -111,10 +130,10 @@
                                             <i class="gg-play-button-o"></i>
                                             <span class="ms-2">EP | 2</span>
                                         </div>
-                                        <h4 class="pt-4">Companion</h4>
-                                        <div class="fw-light" style="font-size: 90%;">Rachel Leung</div>
-                                        <div class="fw-light" style="font-size: 90%;">Houseman</div>
-                                        <div class="fw-light" style="font-size: 90%;">S.H.Ho | MBChB</div>
+                                        <h4 class="pt-4" id="2-topic"></h4>
+                                        <div class="fw-light" style="font-size: 90%;" id="2-name"></div>
+                                        <div class="fw-light" style="font-size: 90%;" id="2-pos"></div>
+                                        <div class="fw-light" style="font-size: 90%;" id="2-col"></div>
                                     </div>
                                 </div>
                             </div>
@@ -134,10 +153,10 @@
                                             <i class="gg-play-button-o"></i>
                                             <span class="ms-2">EP | 3</span>
                                         </div>
-                                        <h4 class="pt-4">Friendship</h4>
-                                        <div class="fw-light" style="font-size: 90%;">Ashley Chan</div>
-                                        <div class="fw-light" style="font-size: 90%;">Founder of Blendit</div>
-                                        <div class="fw-light" style="font-size: 90%;">Chung Chi | Professional Accountancy</div>
+                                        <h4 class="pt-4" id="3-topic"></h4>
+                                        <div class="fw-light" style="font-size: 90%;" id="3-name"></div>
+                                        <div class="fw-light" style="font-size: 90%;" id="3-pos"></div>
+                                        <div class="fw-light" style="font-size: 90%;" id="3-col"></div>
                                     </div>
                                 </div>
                             </div>
@@ -158,12 +177,11 @@
                                             <span class="ms-2">EP | 4</span>
                                         </div>
 
-                                        <h4 class="pt-4">Reinvention</h4>
-                                        <div class="fw-light" style="font-size: 90%;">Enders Wong</div>
-                                        <div class="fw-light" style="font-size: 90%;">Ceramics Artist | Kintsugi Artist
-                                        </div>
-                                        <div class="fw-light" style="font-size: 90%;">New Asia | Fine Arts</div>
-                                        <div class="fw-light" style="font-size: 90%;">Graduate School | Fine Arts</div>
+                                        <h4 class="pt-4" id="4-topic"></h4>
+                                        <div class="fw-light" style="font-size: 90%;" id="4-name"></div>
+                                        <div class="fw-light" style="font-size: 90%;" id="4-pos"></div>
+                                        <div class="fw-light" style="font-size: 90%;" id="4-col"></div>
+                                        <div class="fw-light" style="font-size: 90%;" id="4-col2"></div>
                                     </div>
                                 </div>
                             </div>
@@ -186,20 +204,17 @@
                                         </div>
 
                                         <div>
-                                            <h4 class="pt-4">Staying True</h4>
-                                            <div class="fw-light" style="font-size: 90%;">Adam Wong</div>
-                                            <div class="fw-light" style="font-size: 90%;">Director | Writer</div>
-                                            <div class="fw-light" style="font-size: 90%;">New Asia | Fine Arts</div>
+                                            <h4 class="pt-4" id="5-topic"></h4>
+                                            <div class="fw-light" style="font-size: 90%;" id="5-name"></div>
+                                            <div class="fw-light" style="font-size: 90%;" id="5-pos"></div>
+                                            <div class="fw-light" style="font-size: 90%;" id="5-col"></div>
                                         </div>
 
                                         <div class="text-end pe-4 pb-4 mt-auto">
-                                            <div class="fw-light" style="font-size: 90%;">Saville Chan</div>
-                                            <div class="fw-light" style="font-size: 90%;">Producer | Writer | Lyricist
-                                            </div>
-                                            <div class="fw-light" style="font-size: 90%;">New Asisa | Anthropology</div>
+                                            <div class="fw-light" style="font-size: 90%;" id="6-name"></div>
+                                            <div class="fw-light" style="font-size: 90%;" id="6-pos"></div>
+                                            <div class="fw-light" style="font-size: 90%;" id="6-col"></div>
                                         </div>
-
-
                                     </div>
                                     <img class="col-12 col-md-4" src="./static/6.bmp">
                                 </div>
@@ -214,43 +229,27 @@
 
     <section id="foot-pic" class="pt-4 pb-4 bg-foot-pic">
         <div class="container">
-            <div class="row">
+            <div class="row py-4">
                 <div class="col col-12 col-lg-6 d-flex justify-content-center">
-                    <div class="d-flex justify-content-center" style="max-width: 400px">
-                        <div class="mt-5 pt-4">
+                    <div class="d-flex justify-content-center align-items-center" style="max-width: 400px">
                         <img class="foot-pic" data-aos="zoom-in-up"
                             src="./static/Cover-2023-0110-CUHKers and Their Careers-1.png">
-                        </div>
                     </div>
                 </div>
-                <div class="col col-12 col-lg-6">
+                <div class="col col-12 col-lg-6 d-flex align-items-center">
                     <div class="intro" data-aos="zoom-in-up">
                         <div class="wrap ani animated" data-ani-delay=".5"
                             style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                            <h2>CUHKers and Their Careers II - eBook</h2>
-                            <p style="font-size: 17px;text-align: left;">
-                                Floriography, the language of flowers, ascribes human values to flowers according to their appearances and
-                                attributes. Likewise, The Chinese University of Hong Kong (CUHK) provides all-round education to students based on
-                                their specific needs and aptitudes, with a view to fostering the qualities that make them excellent leaders.
-
-                                <br/>
-                                <br/>
-                                Delphinium symbolises caring for others, which has parallels with CUHKers' commitment to staying connected with
-                                local communities. Chrysanthemum is associated with protection, which is comparable to CUHKers who, with their sense
-                                of responsibility, strive to serve the community and help those in need. Forget-me-not symbolises real friendship,
-                                something that CUHKers build among themselves. Frangipani represents hope and strength, which is comparable to
-                                CUHKers' courage to face different challenges, bringing positive changes for themselves. Platycodon symbolises
-                                staying true to oneself, just as CUHKers stay true to their dreams after graduation.
-
-                                <br/>
-                                <br/>
-
-                                The "mountain city" connects CUHKers so that they become each other's companion. In times when they feel lost and
-                                confused, may the alma mater reminds them about they are and how to stay true to their aspirations.
-                            
+                            <h2 id="ebook-title"></h2>
+                            <p style="font-size: 17px;text-align: left;" class="py-4" id="ebook-text">
                             </p>
                             <div style="position:relative;">
-                                <a class="button-17" role="button" href="http://ftp.at-creative.com/uploads/germaine-yu-cuhkers/download/2023-0110-web-version/2023-0110-CUHKers%20and%20Their%20Careers.pdf" target="_blank">Click Here to Read</a>
+                                <a 
+                                class="button-17" 
+                                role="button" 
+                                id="click-to-read"
+                                href="http://ftp.at-creative.com/uploads/germaine-yu-cuhkers/download/2023-0110-web-version/2023-0110-CUHKers%20and%20Their%20Careers.pdf" 
+                                target="_blank"></a>
                             </div>
                         </div>
 
@@ -259,8 +258,8 @@
             </div>
             <div class="justify-content-center d-flex">
                 <a class="button-57 col-4" role="button" href="https://www.cuhk.edu.hk/osa/cuhkers/en/">
-                    <span class="text">We are CUHKers I</span>
-                    <span>We are CUHKers I</span>
+                    <span class="text" id="to-cuhkers1.1"></span>
+                    <span id="to-cuhkers1.2"></span>
                 </a>
             </div>
         </div>
