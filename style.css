@@ -201,6 +201,8 @@ img.foot-pic {
   box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
   box-sizing: border-box;
   color: #c66840;
+  background-color: rgb(255,255,255,0.9);
+  
   cursor: pointer;
   display: inline-flex;
   fill: currentcolor;
@@ -293,10 +295,11 @@ img.foot-pic {
   transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
   z-index: 100;
   opacity: 0;
-  top: 60%;
+  width: 100%;
+  top: 63%;
   left: 50%;
   transform: translateY(225%) translateX(-50%);
-  height: 14px;
+  /* height: 14px; */
   line-height: 13px;
 }
 

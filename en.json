@@ -1,7 +1,7 @@
 {
     "title-1": "We are CUHKers II",
     "subtitle-1": "Change and constant at CUHK",
-    "content-1": "In the second season of the We are CUHKers series, we invited two prominent CUHK alumni, film director Adam Wong and producer Saville Chan, to document their meaningful conversations with some of our graduates. Together they discussed the distinctive qualities of CUHKers. We also sat down with five friends, who are either current CUHK students or young alumni. All have overcome a myriad of hurdles in pursuing their dreams, and eventually became the worldly individuals they are today. Nevertheless, they remain steadfast in their beliefs. Educated in the same environment, and excelling in their own fields (architecture, business, art, and sports), how did they, with the special qualities of CUHKers, evolve and flourish? Let us dive into their conversations, and appreciate how the CUHK spirit is ingrained in each of us in one way or another.",
+    "content-1": "In the second season of the \"We are CUHKers\" series, we invited two prominent CUHK alumni, film director Adam Wong and producer Saville Chan, to document their meaningful conversations with some of our graduates. Together they discussed the distinctive qualities of CUHKers. We also sat down with five friends, who are either current CUHK students or young alumni. All have overcome a myriad of hurdles in pursuing their dreams, and eventually became the worldly individuals they are today. Nevertheless, they remain steadfast in their beliefs. Educated in the same environment, and excelling in their own fields (architecture, business, art, and sports), how did they, with the special qualities of CUHKers, evolve and flourish? Let us dive into their conversations, and appreciate how the CUHK spirit is ingrained in each of us in one way or another.",
 
     "video-topic": "We are CUHKers II - Video Series",
     "1-topic": "Connection",
@@ -32,7 +32,7 @@
 
     "6-name": "Saville Chan",
     "6-pos": "Producer | Writer | Lyricist",
-    "6-col": "New Asisa | Anthropology",
+    "6-col": "New Asia | Anthropology",
 
     "ebook-title": "CUHKers and Their Careers II - eBook",
     "ebook-text": ["Floriography, the language of flowers, ascribes human values to flowers according to their appearances and attributes. Likewise, The Chinese University of Hong Kong (CUHK) provides all-round education to students based on their specific needs and aptitudes, with a view to fostering the qualities that make them excellent leaders."
@@ -41,6 +41,6 @@
     ],
 
     "click-to-read": "Click Here to Read",
-    "to-cuhkers1.1" : "We are CUHKers I",
-    "to-cuhkers1.2" : "We are CUHKers I"
+    "to-cuhkers1.1" : ["Revisit the first season:","We are CUHKers I"],
+    "to-cuhkers1.2" : ["Revisit the first season:","We are CUHKers I"]
 }
